@@ -10,6 +10,7 @@ export default function DynamicPage() {
   const {
     query: { name },
   } = router
+  console.log('gooing to test git action');
   return (
     <>
       <div style={{ minHeight: '1000px' }}>You're referring {name}'s profile</div>
