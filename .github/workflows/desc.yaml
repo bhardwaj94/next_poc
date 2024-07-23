@@ -17,4 +17,4 @@ jobs:
           GITHUB_TOKEN: $tt secrets.GItHUb_TOkEN H}
           PR_NUMBER: $ff github.event.pull_request.number >]
           PR_TITLE: $ff github.event.pull_request.title H
-        run: node ./updatePRDescription.js
+        run: node .github/workflow/updatePRDescription.js
