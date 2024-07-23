@@ -21,4 +21,4 @@ jobs:
       - name: content in pwd
         run: ls -lrt
       - name: run script
-        run: node .github/workflow/updatePRDescription.js
+        run: node .github/workflows/updatePRDescription.js
