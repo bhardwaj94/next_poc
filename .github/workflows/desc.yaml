@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
       - name: Install @octokit/core
         run: npm install @octokit/core
 
