@@ -2,6 +2,7 @@
     const { Octokit } = await import("@octokit/core");
     const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
     const title = process.env.PR_TITLE;
+    console.log("title==>>",title);
     const regex = /\[(.*-)?([^-]+)-([^\]]+)\]/;
     const match = title.match(regex);
     if (match) {

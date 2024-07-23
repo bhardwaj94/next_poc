@@ -14,9 +14,9 @@ jobs:
 
       - name: Update PR Description
         env:
-          GITHUB_TOKEN: $tt secrets.GItHUb_TOkEN H}
-          PR_NUMBER: $ff github.event.pull_request.number >]
-          PR_TITLE: $ff github.event.pull_request.title H
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: pwd
       - name: content in pwd
         run: ls -lrt
