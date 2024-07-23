@@ -5,15 +5,15 @@ on:
 jobs:
   update-pr-description:
     runs-on: ubuntu-latest
-steps:
-  - name: Checkout repository
-    uses: actions/checkout@v2
-  - name: Install @octokit/core
-    run: npm install @octokit/core
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Install @octokit/core
+        run: npm install @octokit/core
 
-  - name: Update PR Description
-    env:
-      GITHUB_TOKEN: $tt secrets.GItHUb_TOkEN H}
-      PR_NUMBER: $ff github.event.pull_request.number >]
-      PR_TITLE: $ff github.event.pull_request.title H
-    run: node ./updatePRDescription.js
+      - name: Update PR Description
+        env:
+          GITHUB_TOKEN: $tt secrets.GItHUb_TOkEN H}
+          PR_NUMBER: $ff github.event.pull_request.number >]
+          PR_TITLE: $ff github.event.pull_request.title H
+        run: node ./updatePRDescription.js
