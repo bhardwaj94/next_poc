@@ -17,8 +17,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           PR_TITLE: ${{ github.event.pull_request.title }}
-        run: pwd
-      - name: content in pwd
-        run: ls -lrt
-      - name: run script
         run: node .github/workflows/updatePRDescription.js
