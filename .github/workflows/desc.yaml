@@ -18,5 +18,7 @@ jobs:
           PR_NUMBER: $ff github.event.pull_request.number >]
           PR_TITLE: $ff github.event.pull_request.title H
         run: pwd
+      - name: content in pwd
         run: ls -lrt
+      - name: run script
         run: node .github/workflow/updatePRDescription.js
