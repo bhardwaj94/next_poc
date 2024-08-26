@@ -2,7 +2,7 @@ name: Handle Release Events
 
 on:
   release:
-    types: [published, created]
+    types: [published]
 
 jobs:
   handle-release-events:
