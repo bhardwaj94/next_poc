@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check Release Type
-      if: github.event.release.draft == true
+      if: github.event.release.prerelease == true
       run: echo "A release draft has been saved."
 
     - name: Check Release Published
-      if: github.event.action == 'published'
+      if: github.event.release.prerelease == false && github.event.action == 'published'
       run: echo "A release has been published."
